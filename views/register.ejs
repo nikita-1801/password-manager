@@ -1,0 +1,50 @@
+<%- include ("layouts/header") -%>
+
+<div class="main container">
+    <h1><b>Register</b></h1>
+
+    <form action="/auth/register" method="POST">
+        <div>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email ID</label><br>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div>
+            <label for="confirm">Confirm Password</label><br>
+            <input type="password" id="confirm" name="confirm" required>
+        </div>
+        <div>
+            <label for="ques">Choose Security Question</label><br>
+            <select type="text" id="ques" name="ques" required>
+                <option value="select" hidden>Select</option> 
+                <!-- TO-DO: user should not be able to register with 'select' selected -->
+                <option value="birth">What was your place of birth?</option>
+                <option value="flower">What is your favourite flower?</option>
+                <option value="destination">What is your dream destination?</option>
+            </select><br>
+            <input type="password" id="ans" name="ans" placeholder="Answer security question" required>
+        </div>
+        <div class="all-btn">
+            <button type="submit">Create Account</button>
+        </div>
+    </form>
+    <div class="direct">
+        <p>Already have an account?
+            <a href="/login">Login</a>
+        </p>
+    </div>
+</div>
+
+<!-- % if(message){ %> -->
+    <!-- <h6 class="error-msg">%= message %></h6>  -->
+<!-- % } %>  -->
+
+</body>
+</html>

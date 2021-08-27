@@ -1,0 +1,29 @@
+<%- include ("layouts/header") -%>
+
+    
+<div class="actions">
+    <%- include ("layouts/back_home") -%>
+    <%- include ("layouts/log_out") -%>
+</div>
+
+<div class="container user-page">
+    <h1><b>Generate Password</b></h1>
+
+    <form action="" method="POST">
+        <div>
+            <label for="website">Enter Website Name</label><br>
+            <input type="text" id="website" name="website" required>
+        </div>
+        <div>
+            <label for="email">Enter Email or Username</label><br>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div class="all-btn">
+            <button type="submit">Generate Password</button>
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>
